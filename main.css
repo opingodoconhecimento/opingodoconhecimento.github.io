@@ -143,6 +143,12 @@ footer .copyright {
     align-self: flex-end;
 }
 
+footer .page-update {
+    font-style: italic;
+    font-size: 1.2rem;
+    align-self: flex-end;
+}
+
 /* Utility classes */
 
 .side-margin {
