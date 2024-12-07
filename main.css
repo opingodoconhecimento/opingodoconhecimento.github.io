@@ -2,7 +2,7 @@
     --page-bg-1: #6BCBFF;
     --page-bg-2: #9EF0FF;
     --light-text: white;
-    --dark-text: #303030;
+    --dark-text: black;
     --side-margin: 5%;
     --border-radius: 1rem;
     --nav-height: 100px;
@@ -53,11 +53,39 @@ main {
     background-repeat: repeat-x;
     background-position-x: center;
     background-size: 40rem;
+    background-position-y: 10rem;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.game > #game-logo {
+    position: relative;
+    height: 20rem;
+    width: 37rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game > #game-logo > img {
+    pointer-events: none;
+    position: absolute;
+    height: 110%;
+    transition: all 250ms;
+}
+
+.game > #game-logo:hover > img {
+    height: 125%;
+    transition: all 250ms;
 }
 
 .game > .wrapper {
     position: relative;
-    margin: auto;
     width: 30rem;
     height: 100%;
     display: flex;
@@ -75,24 +103,25 @@ main {
     justify-content: center;
 }
 
-.game > .wrapper > .play > p {
+.game > .wrapper > .play > a {
+    text-decoration: none;
     font-size: 2.5em;
     text-wrap: nowrap;
     color: var(--light-text);
 
     padding: 0.4rem 0.8rem;
-    border: var(--logo-yellow) solid 0.4rem;
-    border-radius: 0.8rem;
+    border: var(--logo-yellow) solid 0.2rem;
+    border-radius: 0.4rem;
     background: linear-gradient(var(--logo-orange), var(--logo-yellow));
     outline: var(--dark-text) solid 0.2rem;
     z-index: 2;
 }
 
-.game > .wrapper > .play:hover > p {
-    border: var(--logo-orange) solid 0.4rem;
+.game > .wrapper > .play:hover > a,
+.game > .wrapper > .play:focus-within > a {
+    border: var(--logo-orange) solid 0.2rem;
     color: var(--dark-text);
 }
-
 .game > .wrapper > .play > img {
     z-index: 0;
     position: absolute;
@@ -115,9 +144,8 @@ main {
 
 .game > .bg {
     position: absolute;
-    top: 0;
     background: linear-gradient(white, rgba(0, 0, 0, 0));
-    top: 6rem;
+    top: 16rem;
     height: inherit;
     width: 100%;
 }
