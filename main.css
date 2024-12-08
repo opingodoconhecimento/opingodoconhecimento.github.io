@@ -2,7 +2,7 @@
     --page-bg-1: #6BCBFF;
     --page-bg-2: #9EF0FF;
     --light-text: white;
-    --dark-text: #222;
+    --dark-text: #111;
     --side-margin: 5%;
     --border-radius: 1rem;
     --nav-height: 100px;
@@ -30,13 +30,25 @@ nav {
     background-color: var(--page-bg-1);
     height: var(--nav-height);
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-logo {
+    position: absolute;
+    width: calc(var(--nav-height) * 2.5);
+    margin-left: var(--side-margin);
 }
 
 .nav-logo > img {
-    margin-left: 5rem;
-    position: absolute;
-    border-radius: 4px;
-    height: var(--nav-height);
+    position: relative;
+    width: 100%;
+}
+
+.nav-logo:focus > img,
+.nav-logo:hover > img {
+    filter: brightness(0);
 }
 
 main {
@@ -47,7 +59,7 @@ main {
 
 .game {
     position: relative;
-    margin-top: 10vh;
+    margin-top: var(--nav-height);
     height: 30rem;
 
     display: flex;
@@ -77,7 +89,7 @@ main {
 .game > .wrapper {
     position: relative;
     height: 100%;
-    width: 30rem;
+    width: min(30rem, 100%);
 
     display: flex;
     flex-direction: column;
@@ -137,7 +149,7 @@ main {
     position: absolute;
     background: linear-gradient(white, rgba(0, 0, 0, 0));
     top: 17.8rem;
-    height: inherit;
+    height: 12.2rem;
     width: 100%;
 }
 
