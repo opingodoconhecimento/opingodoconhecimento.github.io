@@ -31,6 +31,15 @@ body {
     color: var(--dark-text);
 }
 
+a {
+    color: var(--link-1);
+}
+
+a:focus,
+a:hover {
+    color: var(--link-2);
+}
+
 nav {
     z-index: 5;
     position: fixed;
@@ -42,28 +51,19 @@ nav {
     align-items: center;
 }
 
-a {
-    color: var(--link-1);
-}
-
-a:focus,
-a:hover {
-    color: var(--link-2);
-}
-
-.nav-logo {
+nav > .nav-logo {
     position: absolute;
     width: calc(var(--nav-height) * 2.5);
     margin-left: var(--side-margin);
 }
 
-.nav-logo > img {
+nav > .nav-logo > img {
     position: relative;
     width: 100%;
 }
 
-.nav-logo:focus > img,
-.nav-logo:hover > img {
+nav > .nav-logo:focus > img,
+nav > .nav-logo:hover > img {
     filter: brightness(0);
 }
 
@@ -286,6 +286,10 @@ footer #webinfo {
     nav {
         flex-direction: column;
         justify-content: center;
+    }
+
+    nav > .nav-logo {
+        margin: auto;
     }
 
     .game {
