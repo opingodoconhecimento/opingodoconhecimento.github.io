@@ -23,8 +23,8 @@
 }
 
 body {
-    background-color: var(--page-bg-1);
-    min-height: 200vh;
+    background-color: var(--page-bg-2);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: Helvetica, sans-serif;
@@ -70,10 +70,9 @@ a:hover {
 main {
     margin-top: var(--nav-height);
     background: linear-gradient(var(--page-bg-1), var(--page-bg-2) 25rem);
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
 }
 
 .game {
@@ -233,7 +232,7 @@ footer {
 
     background-color: var(--footer-bg);
     color: var(--light-text);
-    padding-bottom: 2rem;
+    margin-top: auto;
 
     font-size: 1.2rem;
     line-height: 2rem;
