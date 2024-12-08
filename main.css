@@ -284,6 +284,11 @@ footer #webinfo {
 }
 
 @media (max-width: 50rem) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .game {
         flex-direction: column;
         gap: 0;
