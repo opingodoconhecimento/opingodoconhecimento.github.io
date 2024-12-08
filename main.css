@@ -10,6 +10,8 @@
     --logo-orange: #F49811;
     --logo-yellow: #FEC503;
     --footer-img: url("images/ground1.png");
+    --footer-color-1: #FFC31A;
+    --footer-color-2: #E67E22;
     --footer-bg: #331A21;
 }
 
@@ -216,7 +218,42 @@ main {
 footer {
     background-color: var(--footer-bg);
     color: var(--light-text);
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
+
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+footer a {
+    color: var(--footer-color-1);
+}
+
+footer a:focus,
+footer a:hover {
+    color: var(--footer-color-2);
+}
+
+footer h2 {
+    margin-bottom: 0.4rem;
+}
+
+footer p {
+    font-size: 1.3rem;
+}
+
+footer > .content {
+    width: var(--content-width);
+    margin: auto;
+}
+
+footer > .content > div {
+    margin-bottom: 2.5rem;
+}
+
+footer #webinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .ground {
@@ -265,6 +302,8 @@ footer {
 @media (max-width: 50rem), (pointer:none), (pointer:coarse) {
     :root {
         --footer-img: url("images/ground2.png");
+        --footer-color-1: #70E75A;
+        --footer-color-2: #408A33;
         --footer-bg: #260F1E;
     }
 
@@ -280,6 +319,11 @@ footer {
         border: var(--page-bg-2) solid 0.2rem;
         outline: black solid 0.2rem;
         background: linear-gradient(var(--page-bg-1), var(--page-bg-2));
+    }
+
+    footer #webinfo {
+        align-items: center;
+        text-align: center;
     }
 }
 
