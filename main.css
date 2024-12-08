@@ -9,6 +9,8 @@
     --nav-height: 100px;
     --logo-orange: #F49811;
     --logo-yellow: #FEC503;
+    --footer-img: url("images/ground1.png");
+    --footer-bg: #331A21;
 }
 
 * {
@@ -58,6 +60,7 @@ main {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-bottom: 3rem;
 }
 
 .game {
@@ -210,6 +213,22 @@ main {
     height: calc((var(--content-width) * 9) / 16);
 }
 
+footer {
+    background-color: var(--footer-bg);
+    color: var(--light-text);
+    padding-bottom: 4rem;
+}
+
+.ground {
+    --grass-height: 3.4rem;
+    background: var(--footer-img) repeat-x;
+    background-size: var(--grass-height);
+    background-position: center;
+    width: 100%;
+    height: var(--grass-height);
+    margin-bottom: var(--grass-height);
+}
+
 @media (max-width: 80rem) {
     .game {
         gap: 0rem;
@@ -244,6 +263,11 @@ main {
 }
 
 @media (max-width: 50rem), (pointer:none), (pointer:coarse) {
+    :root {
+        --footer-img: url("images/ground2.png");
+        --footer-bg: #260F1E;
+    }
+
     .game > .wrapper > #playstore > a {
         font-size: min(8vw, 2.5rem);
         padding: 0.6rem 1.6rem;
