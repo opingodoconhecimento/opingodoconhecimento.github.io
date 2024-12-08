@@ -3,6 +3,8 @@
     --page-bg-2: #9EF0FF;
     --light-text: white;
     --dark-text: #111;
+    --link-1: rgb(160, 83, 255);
+    --link-2: var(--dark-text);
     --side-margin: 5%;
     --content-width: min(45rem, 85vw);
     --border-radius: 1rem;
@@ -40,6 +42,15 @@ nav {
     align-items: center;
 }
 
+a {
+    color: var(--link-1);
+}
+
+a:focus,
+a:hover {
+    color: var(--link-2);
+}
+
 .nav-logo {
     position: absolute;
     width: calc(var(--nav-height) * 2.5);
@@ -68,6 +79,7 @@ main {
 .game {
     position: relative;
     margin-top: var(--nav-height);
+    margin-bottom: 5rem;
     height: 30rem;
 
     display: flex;
@@ -184,7 +196,7 @@ main {
 }
 
 .text {
-    margin: 10rem auto 0 auto;
+    margin: 5rem auto 0 auto;
     width: var(--content-width);
     color: var(--dark-text);
     text-shadow: 0.2rem 0.2rem 1rem var(--page-bg-2);
@@ -209,28 +221,22 @@ main {
 
     border-radius: 0.5rem;
     outline: 0.5rem solid var(--dark-text);
-    margin: 3rem 0.5rem;
+    margin: 3rem 0.5rem 0 0.5rem;
 
     width: var(--content-width);
     height: calc((var(--content-width) * 9) / 16);
 }
 
 footer {
+    --link-1: var(--footer-color-1);
+    --link-2: var(--footer-color-2);
+
     background-color: var(--footer-bg);
     color: var(--light-text);
     padding-bottom: 2rem;
 
     font-size: 1.2rem;
     line-height: 2rem;
-}
-
-footer a {
-    color: var(--footer-color-1);
-}
-
-footer a:focus,
-footer a:hover {
-    color: var(--footer-color-2);
 }
 
 footer h2 {
