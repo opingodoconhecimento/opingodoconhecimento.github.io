@@ -4,7 +4,7 @@
     --light-text: white;
     --dark-text: #111;
     --side-margin: 5%;
-    --content-width: min(45rem, 85%);
+    --content-width: min(45rem, 85vw);
     --border-radius: 1rem;
     --nav-height: 100px;
     --logo-orange: #F49811;
@@ -56,6 +56,8 @@ main {
     margin-top: var(--nav-height);
     background: linear-gradient(var(--page-bg-1), var(--page-bg-2) 25rem);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .game {
@@ -177,7 +179,7 @@ main {
 }
 
 .text {
-    margin: 10rem auto;
+    margin: 10rem auto 0 auto;
     width: var(--content-width);
     color: var(--dark-text);
     text-shadow: 0.2rem 0.2rem 1rem var(--page-bg-2);
@@ -193,6 +195,19 @@ main {
     line-height: 1.4em;
     margin-bottom: 1em;
     text-align: justify;
+}
+
+#trailer {
+    background-color: black;
+    align-self: center;
+    justify-self: center;
+
+    border-radius: 0.5rem;
+    outline: 0.5rem solid var(--dark-text);
+    margin: 3rem 0.5rem;
+
+    width: var(--content-width);
+    height: calc((var(--content-width) * 9) / 16);
 }
 
 @media (max-width: 80rem) {
