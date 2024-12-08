@@ -4,6 +4,7 @@
     --light-text: white;
     --dark-text: #111;
     --side-margin: 5%;
+    --content-width: min(45rem, 85%);
     --border-radius: 1rem;
     --nav-height: 100px;
     --logo-orange: #F49811;
@@ -173,6 +174,25 @@ main {
 @keyframes slide {
     0% { right: 0; }
     100% { right: -100%; }
+}
+
+.text {
+    margin: 10rem auto;
+    width: var(--content-width);
+    color: var(--dark-text);
+    text-shadow: 0.2rem 0.2rem 1rem var(--page-bg-2);
+}
+
+.text > h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.text > p {
+    font-size: 1.5rem;
+    line-height: 1.4em;
+    margin-bottom: 1em;
+    text-align: justify;
 }
 
 @media (max-width: 80rem) {
