@@ -1,7 +1,7 @@
 :root {
     --page-bg-1: #6BCBFF;
     --page-bg-2: #9EF0FF;
-    --light-text: white;
+    --light-text: #f7f7f7;
     --dark-text: #111;
     --link-1: rgb(160, 83, 255);
     --link-2: var(--dark-text);
@@ -186,7 +186,7 @@ main {
     background: url("images/background_trees.png") repeat-x;
     background-size: 50rem;
     background-position: right;
-    animation: slide 45s linear infinite;
+    animation: slide 120s linear infinite;
 }
 
 @keyframes slide {
