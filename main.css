@@ -105,6 +105,10 @@ main {
     transition: all 250ms;
 }
 
+.game > #game-logo:hover > img {
+    height: 110%;
+}
+
 .game > .wrapper {
     position: relative;
     height: 100%;
@@ -310,6 +314,13 @@ footer #webinfo {
         top: 2rem;
         right: 3rem;
         rotate: -20deg;
+    }
+
+    .game > .wrapper > #itch:hover > a,
+    .game > .wrapper > #itch:focus-within > a {
+        background: linear-gradient(var(--logo-orange), var(--logo-yellow));
+        border: var(--logo-orange) solid 0.2rem;
+        color: var(--dark-text);
     }
 }
 
