@@ -22,8 +22,12 @@
     padding: 0;
 }
 
+html {
+    background-color: var(--footer-bg);
+}
+
 body {
-    background-color: var(--page-bg-2);
+    background-color: var(--page-bg-1);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -77,8 +81,6 @@ main {
 
 .game {
     position: relative;
-    margin-top: var(--nav-height);
-    margin-bottom: 5rem;
     height: 30rem;
 
     display: flex;
