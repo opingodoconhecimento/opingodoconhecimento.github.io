@@ -322,11 +322,13 @@ footer #webinfo {
     nav {
         flex-direction: column;
         justify-content: center;
+        padding: 1rem 0;
     }
 
     nav > .nav-logo,
     nav > .nav-links {
         margin: auto;
+        font-size: 1.5rem;
     }
 
     .game {
